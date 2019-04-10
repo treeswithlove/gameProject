@@ -9,12 +9,13 @@
 //                     \
 
 //                    if( input == answer){
-//                     user1Points + Number(innerText)
+//                     userPoints + Number(innerText)
 //                    }else {
 //                     userpoints - Number(innerText)
 //                    }
 
 
-//two player game
-// two scores displayed in innerText
+//welcome page
+//one player game 
+//score displayed in innerText
 //
