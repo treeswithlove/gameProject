@@ -3,14 +3,12 @@
 // if statement inside for loop to number the button's innerText with points
 //create event listener for each box to grab the [i] object
 //[i] object includes question and answer choices
-// create event listner for click to remove innerText
-
-
-
-
-
-
-
+// create event listner for click to remove button
+//  if( input == answer){
+//                     userPoints + Number(innerText)
+//                    }else {
+//                     userpoints - Number(innerText)
+//                    }
 
 //             div
 //             / 

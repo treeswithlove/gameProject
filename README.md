@@ -1,5 +1,8 @@
 # gameProject
-https://boring-brattain-2fc9b7.netlify.com     
+https://nervous-clarke-cf44d3.netlify.com   
+
+Used trello for pre-planning.
+Used git hub for further planning.
 https://trello.com/b/spJyH8lK/project-1-game
 ---------------------------------- 
 
