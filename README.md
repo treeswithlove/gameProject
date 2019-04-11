@@ -1,14 +1,19 @@
 # gameProject
+My deployed site lies here:
 https://nervous-clarke-cf44d3.netlify.com   
-
+-------
 Used trello for pre-planning.
-Used git hub for further planning.
 https://trello.com/b/spJyH8lK/project-1-game
+Used git hub for further planning.
+https://github.com/treeswithlove/gameProject/projects/1
 ---------------------------------- 
+## GameRules
 
 This is jeopardy: answer the questions correctly to recieve points. 
 answer incorrectly and lose points.
-This is a two player game. The person with the most points the end wins!
+Score above zero and win!
+Score 0 and tie.
+Score below 0 and lose.
 --------------------------------
 
 **Here lies my whiteboarding**
