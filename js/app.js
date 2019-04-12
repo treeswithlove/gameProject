@@ -29,10 +29,13 @@ for(let i = 1; i<6 ;i++){
     for(let z = 0; z<6; z++){
         //inside div is a button
         let row =  document.createElement("button")
+        
         //if statement allows seperation of categories and quesiton
         if(z===0){
             $(row).addClass(`row${z} categories`)
             $(column).append(row)
+            $(row).attr("id", `${(z+(i*10))}`)
+            // titles for categories
             $(".column1 > .categories").html(`Composting`) 
             $(".column2 > .categories").html(`Food Sustainability`) 
             $(".column3 > .categories").html(`Gardening`) 
@@ -43,6 +46,7 @@ for(let i = 1; i<6 ;i++){
         else{
             $(row).addClass(`row${z} modalLink`)
             $(column).append(row)
+            $(row).attr("id", `${(z+(i*10))}`)
             // if statement inside for loop to number the button's innerText with points
             row.innerText= userPoints
             userPoints+= 100
