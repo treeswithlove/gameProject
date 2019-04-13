@@ -58,8 +58,7 @@ for(let i = 1; i<6 ;i++){
         }
     }
 }
-
-//object of objects with my question
+//object of objects with my questions and answers
 const questionsAnswers = {
     11: {
         question:"Composting reduces trash from going where?",
@@ -183,11 +182,14 @@ const questionsAnswers = {
   
 }
  //create modal
-$(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><h1>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
+$(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><div class='holdQuestionInput'></div>")
 // create event listner for click to get id
 //create event listener for each box to grab the [i] object
 
 $(".modalLink").click(function(){
+    //creates new question and input field after emptying it
+$(".holdQuestionInput").prepend("<h1>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
+
 let getId = $(this).attr('id')
    console.log(getId)
    let question = questionsAnswers[getId].question
@@ -221,27 +223,17 @@ $(".question").html(question)
  
  }) 
 
-
 //modal open
 $(".modalLink").click(()=>{
   $(".modalDisplay").css("display","flex")
  })
  //modal close
 $(".close").click(()=>{
-  ($(".question")).replaceWith("")
-  ($("input")).replaceWith("")
-  $(".modalDisplay").css("display","none")
+    $(".modalDisplay").css("display","none")
+    //clears question and input feild
+  $(".holdQuestionInput").empty()
  })
  // create event listner for click to remove button
 $("main").on("click",".modalLink",()=>{
     $(event.target).remove()
 })
-//create modal
-
-//[i] object includes question and answer choices
-// create score keeper in aside
-//  if( guess === answer){
-//                     userPoints + Number(innerText)
-//                    }else {
-//                     userpoints - Number(innerText)
-//                    }
