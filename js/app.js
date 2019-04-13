@@ -244,6 +244,6 @@ $(".close").click(()=>{
 $("main").on("click",".modalLink",()=>{
     $(event.target).remove()
 })
-// $("main").on("click",".modalLink",()=>{
-//   if()
-// })
+
+$("footer").prepend("<button class='quit'>I quit</button><button class='I'm finished>Finished</button><button class='restart'>Restart</button><button class='rules'>Rules</button>")
+$()
