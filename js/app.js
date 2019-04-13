@@ -190,7 +190,7 @@ $(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><
 
 $(".modalLink").click(function(){
     //creates new question and input field after emptying it
-$(".holdQuestionInput").prepend("<h1>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
+$(".holdQuestionInput").prepend("<h1 class='largeQues'>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
 
 let getId = $(this).attr('id')
 
@@ -207,7 +207,8 @@ $(".question").html(question)
     console.log(answer)
     //this compares input to answer
     if(userInput == answer){
-        console.log("you got it")
+        $(".largeQues").html("you got it")
+        $(".question").empty()
         pointsAdded = Number($(this).html())
         console.log(pointsAdded)
         userScore += pointsAdded
@@ -215,13 +216,15 @@ $(".question").html(question)
         return userScore
     }
     else{
-        console.log("better luck next time")
+        $(".largeQues").html("better luck next time")
+        $(".question").empty()
         pointsAdded = Number($(this).html())
         console.log(pointsAdded)
         userScore -= pointsAdded
         console.log(userScore)
         return userScore
     }
+    
     })
  
  }) 
@@ -241,3 +244,6 @@ $(".close").click(()=>{
 $("main").on("click",".modalLink",()=>{
     $(event.target).remove()
 })
+// $("main").on("click",".modalLink",()=>{
+//   if()
+// })
