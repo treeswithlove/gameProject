@@ -5,14 +5,14 @@
 //             / 
 //            √button  
 //          /   |    \
-//  √innerText  modal  √eventlistener
+//  √innerText  √modal  √eventlistener
 //        /      | \     \
 // √userPoints   /   \   √remove innerText
-//       question   input
+//       question   √input
 //                     \
-//                    if( guess == answer){
+//                   √ if( guess == answer){
 //                     userPoints + Number(innerText)
-//                    }else {
+//                    }√else {
 //                     userpoints - Numeber(innerText)
 //                    }
 
@@ -181,6 +181,8 @@ const questionsAnswers = {
   
   
 }
+//display score is aside
+$("aside").prepend("<h1>Your Score</h1><p class='score'>0</p>")
  //create modal
 $(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><div class='holdQuestionInput'></div>")
 // create event listner for click to get id
@@ -191,6 +193,7 @@ $(".modalLink").click(function(){
 $(".holdQuestionInput").prepend("<h1>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
 
 let getId = $(this).attr('id')
+
    console.log(getId)
    let question = questionsAnswers[getId].question
    console.log(question)
@@ -232,6 +235,7 @@ $(".close").click(()=>{
     $(".modalDisplay").css("display","none")
     //clears question and input feild
   $(".holdQuestionInput").empty()
+  $(".score").html(userScore)
  })
  // create event listner for click to remove button
 $("main").on("click",".modalLink",()=>{
