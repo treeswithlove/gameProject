@@ -16,8 +16,8 @@
 //                     userpoints - Numeber(innerText)
 //                    }
 
-// let questions = [{}]
 
+let userScore = 0
 //create a for loop to create the <divs class="box"> in parent div (<main>)
 for(let i = 1; i<6 ;i++){
     let userPoints = 100
@@ -25,11 +25,15 @@ for(let i = 1; i<6 ;i++){
     let column =  document.createElement("div")
     $("main").append(column)
     $(column).addClass(`column${i}`)
+   
+    // $(`.categories:nth-child(${i})`).html(arr[i]) 
     // for loop creates the rows in each column
     for(let z = 0; z<6; z++){
         //inside div is a button
         let row =  document.createElement("button")
-        
+        //refactoring titles for categories that doesnt work
+        // let arr = ['Composting','Food Sustainability','Gardening','Slow Fashion','ReUse']
+        // $(`.categories:nth-child(${(z+1)})`).html(arr[z]) 
         //if statement allows seperation of categories and quesiton
         if(z===0){
             $(row).addClass(`row${z} categories`)
@@ -40,10 +44,11 @@ for(let i = 1; i<6 ;i++){
             $(".column2 > .categories").html(`Food Sustainability`) 
             $(".column3 > .categories").html(`Gardening`) 
             $(".column4 > .categories").html(`Slow Fashion`) 
-            $(".column5 > .categories").html(`ReUse `) 
+            $(".column5 > .categories").html(`ReUse`) 
         }
         // here lies the question buttons
         else{
+            // $(`.categories:nth-child(${(z+1)})`).html(arr[z]) 
             $(row).addClass(`row${z} modalLink`)
             $(column).append(row)
             $(row).attr("id", `${(z+(i*10))}`)
@@ -57,23 +62,23 @@ for(let i = 1; i<6 ;i++){
 //object of objects with my question
 const questionsAnswers = {
     11: {
-        question:"what composting reduces trash from going where?",
+        question:"Composting reduces trash from going where?",
         answer: "landfill"
     },
     12: {
-        question:"",
-        answer: ""
+        question:"q",
+        answer: "a"
     },
     13: {
-        question:"",
-        answer: ""
+        question:"w",
+        answer: "b"
     },
     14: {
-        question:"",
-        answer: ""
+        question:"e",
+        answer: "c"
     },
     15: {
-        question:"",
+        question:"r",
         answer: ""
     },
     21: {
@@ -177,19 +182,54 @@ const questionsAnswers = {
   
   
 }
+ //create modal
+$(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><h1>Question:</h1><p class='question'></p><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div>")
 // create event listner for click to get id
 //create event listener for each box to grab the [i] object
+
 $(".modalLink").click(function(){
-    let getId = $(this).attr('id')
+let getId = $(this).attr('id')
    console.log(getId)
-   console.log(questionsAnswers[getId])
- })
- //modal open
+   let question = questionsAnswers[getId].question
+   console.log(question)
+$(".question").html(question)
+ let answer =  questionsAnswers[getId].answer
+
+    $(".submit").click(()=>{
+     //this grabs input and consolelogs
+    let userInput = $("input:text").val()
+    console.log(userInput)
+    console.log(answer)
+    //this compares input to answer
+    if(userInput == answer){
+        console.log("you got it")
+        pointsAdded = Number($(this).html())
+        console.log(pointsAdded)
+        userScore += pointsAdded
+        console.log(userScore)
+        return userScore
+    }
+    else{
+        console.log("better luck next time")
+        pointsAdded = Number($(this).html())
+        console.log(pointsAdded)
+        userScore -= pointsAdded
+        console.log(userScore)
+        return userScore
+    }
+    })
+ 
+ }) 
+
+
+//modal open
 $(".modalLink").click(()=>{
   $(".modalDisplay").css("display","flex")
  })
  //modal close
 $(".close").click(()=>{
+  ($(".question")).replaceWith("")
+  ($("input")).replaceWith("")
   $(".modalDisplay").css("display","none")
  })
  // create event listner for click to remove button
