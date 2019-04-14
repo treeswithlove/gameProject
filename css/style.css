@@ -1,3 +1,7 @@
+.indexPage {
+    background: url(../images/bigHeart.jpg);
+    background-repeat: no-repeat;
+}
 h1 {
     height: 10vh;
     text-align: center;
@@ -64,10 +68,12 @@ footer {
     display: grid;
     grid-row: 1;
     height: 100%;
-    background-color: red;
+    background: url(../images/natureHeart.jpg) center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 .row1{
     display: grid;
