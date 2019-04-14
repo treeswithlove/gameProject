@@ -8,7 +8,7 @@
 //  √innerText  √modal  √eventlistener
 //        /      | \     \
 // √userPoints   /   \   √remove innerText
-//       question   √input
+//       √question   √input
 //                     \
 //                   √ if( guess == answer){
 //                     userPoints + Number(innerText)
@@ -169,7 +169,7 @@ const questionsAnswers = {
 //display score is aside
 $("aside").prepend("<h1>Your Score</h1><p class='score'>0</p>")
 //create modal
-$(".modalDisplay").prepend("<div class='modalInside'><p class='close'>Close</p><div class='holdQuestionInput'></div>")
+$(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInput'></div><p class='close'>close</p></div>")
 // create event listner for click to get id
 //create event listener for each box to grab the [i] object
 
@@ -224,22 +224,28 @@ $(".close").click(() => {
     $(".holdQuestionInput").empty()
     $(".score").html(userScore)
 })
+//modal for start page close
+$(".closeIndex").click(() => {
+    $(".indexPage").css("display", "none")
+
+})
 //create event listner for click to remove button
 $("main").on("click",".modalLink", () => {
     $(event.target).remove()
 })
 
-$("footer").prepend("<div><button class='footerButtons quit'>Quit</button><button class='footerButtons finished'>Answered all the questions! Did I win?</button><a href='../index.html' class='footerButtons restart'>Restart</a><button class='footerButtons rules'>Rules</button></div>")
+$("footer").prepend("<div><button class='footerButtons quit'>Quit</button><button class='footerButtons finished'>Answered all the questions! Did I win?</button><button class='footerButtons rules'>Rules</button></div>")
 
 let quitFunction = () => {
     $(".modalDisplay").css("display", "flex")
-    $(".holdQuestionInput").prepend("<div class='large'></div><a href='../index.html' class='footerButtons restart'>I'm sure</a>")
+    $(".holdQuestionInput").prepend("<div class='large'></div><a href='./content.html' class='footerButtons restart'>I'm sure</a>")
     $(".large").html(`Are you sure you want to quit? </br>If no, select Close. If yes, select "I'm sure" `)
 }
 $(".quit").click(quitFunction)
 $(".finished").click(() => {
     $(".modalDisplay").css("display", "flex")
-    $(".holdQuestionInput").prepend("<div class='large'></div><a href='../index.html' class='footerButtons restart'>Restart</a>")
+    $(".modalDisplay").empty()
+    $(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInput'><div class='large'></div><a href='./content.html' class='footerButtons restart'>Restart</a></div></div>")
     if (userScore > 0) { $(".large").html(`Your final score is ${userScore}. You win!!`) }
     else if (userScore == 0) { $(".large").html(`Your final score is ${userScore}. You tie!!`) }
     else { $(".large").html(`Your final score is ${userScore}.You lose!`) }
