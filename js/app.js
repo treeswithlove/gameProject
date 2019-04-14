@@ -240,7 +240,7 @@ $(".close").click(() => {
     $(".score").html(userScore)
 })
 //create event listner for click to remove button
-$("main").click(".modalLink", () => {
+$("main").on("click",".modalLink", () => {
     $(event.target).remove()
 })
 
