@@ -41,8 +41,8 @@ for (let i = 1; i < 6; i++) {
             $(row).attr("id", `${(z + (i * 10))}`)
             // titles for categories
             $(".column1 > .categories").html(`Composting`)
-            $(".column2 > .categories").html(`Food Sustainability`)
-            $(".column3 > .categories").html(`Gardening`)
+            $(".column2 > .categories").html(`Gardening`)
+            $(".column3 > .categories").html(`Food Sustainability`)
             $(".column4 > .categories").html(`Slow Fashion`)
             $(".column5 > .categories").html(`Reduce ReUse Recycle`)
         }
@@ -60,6 +60,7 @@ for (let i = 1; i < 6; i++) {
 }
 //object of objects with my questions and answers
 //https://play.howstuffworks.com/quiz/compost-quiz
+//https://www.dosomething.org/us/facts/11-facts-about-sustainable-agriculture
 const questionsAnswers = {
     11: {
         question: "True or false? Newspaper is organic waste?",
@@ -79,106 +80,88 @@ const questionsAnswers = {
         answer: "landfill"
     },
     15: {
-        question: "How many tons of trash do Americans create each year?",
+        question: "How many million tons of trash do Americans create each year?",
         answer: "210"
     },
     21: {
-        question: "",
-        answer: ""
+        question: "True or false? Absorbing nutrients and water, storing food and anchoring plants to soil is the function of roots.",
+        answer: "true"
     },
     22: {
-        question: "",
-        answer: ""
+        question: "Which plant part is responsible for photosynthesis, or the conversion of water and sunlight to produce food",
+        answer: "leaves"
     },
     23: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? Late winter-very early spring is the best time to prune most trees, shrubs and other woody plants",
+        answer: "true"
     },
     24: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "Which should be planted in the vegetable garden to repel aphids, bean beetles and other pests?",
+        answer: "marigolds"
     },
     25: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? The golden rule of hedge pruning is the bottom must always remain wider than the top.",
+        answer: "true"
     },
     31: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or False? Sustainable agriculture is the rejection of the industrial approach to food production (aka factory farms). It integrates three main things: environmental health, economic profitability, and social and economic equity.",
+        answer: "true"
     },
     32: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? The ecological and social price of factory farms is: erosion, deforestation, depleted and contaminated soil and water resources, loss of biodiversity, labor abuses, and the decline of family farms.",
+        answer: "true"
     },
     33: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? “Healthy” soil is an important component of sustainability. Methods to enhance and protect the productivity of the soil include using cover crops, compost/manures, avoiding traffic on wet soils, and maintaining soil cover with plants/mulches.",
+        answer: "true"
     },
     34: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? There are 4 key sustainability goals: Satisfy human food needs, and contribute to biofuel needs. Enhance environmental quality. Sustain the economic viability of agriculture. Enhance the quality of life for farmers, farm workers and society as a whole.",
+        answer: "true"
     },
     35: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? With this type of farming, chemical pesticides or fertilizers aren’t necessary, crop diversity is encouraged, and precipitation provides irrigation water.",
+        answer: "true"
     },
     41: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? It’s estimated that less than 1 percent of material used to produce clothing is recycled into something more.",
+        answer: "true"
     },
     42: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "By 2030, it’s expected that fashion waste will increase to a 148 million ton problem.",
+        answer: "true"
     },
     43: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? The modern fashion industry is one of the most pulluting industries in the world.",
+        answer: "true"
     },
     44: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? Cotton, a popular material in clothing, requires high levels of water and pesticides, which cause issues in developing countries.",
+        answer: "true"
     },
     45: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? Only 15 percent of consumers recycle their used clothing.",
+        answer: "true"
     },
     51: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or false? Reducing, Reusing, and Recycling make the Earth cleaner.",
+        answer: "true"
     },
     52: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "Do you need to rinse out your cans, bottles, and jars before putting them in a recycling bin? ",
+        answer: "yes"
     },
     53: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "Are pizza boxes recyclable?",
+        answer: "no"
     },
     54: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "True or False? You can reduce your water usage by shutting off the water while you brush your teeth and taking shorter showers.",
+        answer: "true"
     },
     55: {
-        question: "",
-        answer: "",
-        input: ""
+        question: "Fill in the blank</br>Reduce means: Use less of something, creating smaller amounts of -----",
+        answer: "waste"
     },
 
 
