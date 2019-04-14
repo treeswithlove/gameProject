@@ -61,12 +61,12 @@ for(let i = 1; i<6 ;i++){
 //object of objects with my questions and answers
 const questionsAnswers = {
     11: {
-        question:"Composting reduces trash from going where?",
-        answer: "landfill"
+        question:"True or false? When you put things in the trash, the trash goes to a landfill and hurts the environment?",
+        answer: "true"
     },
     12: {
-        question:"q",
-        answer: "a"
+        question:"Composting enriches the soil and reduces trash from going where?",
+        answer: "landfill"
     },
     13: {
         question:"w",
@@ -207,7 +207,7 @@ $(".question").html(question)
     console.log(answer)
     //this compares input to answer
     if(userInput == answer){
-        $(".large").html("you got it")
+        $(".large").html("Correct!")
         $(".question").empty()
         pointsAdded = Number($(this).html())
         console.log(pointsAdded)
@@ -216,8 +216,7 @@ $(".question").html(question)
         return userScore
     }
     else{
-        $(".large").html("better luck next time")
-        $(".question").empty()
+        $(".large").html(`Incorrect. The answer is ${answer}`)
         pointsAdded = Number($(this).html())
         console.log(pointsAdded)
         userScore -= pointsAdded
@@ -245,12 +244,12 @@ $("main").on("click",".modalLink",()=>{
     $(event.target).remove()
 })
 
-$("footer").prepend("<div><button class='footerButtons quit'>I quit</button><button class='footerButtons finished'>Answered all the questions! Did I win?</button><a href='../index.html' class='footerButtons restart'>Restart</a><button class='footerButtons rules'>Rules</button></div>")
+$("footer").prepend("<div><button class='footerButtons quit'>Quit</button><button class='footerButtons finished'>Answered all the questions! Did I win?</button><a href='../index.html' class='footerButtons restart'>Restart</a><button class='footerButtons rules'>Rules</button></div>")
 
 let quitFunction = ()=>{
     $(".modalDisplay").css("display","flex")
-    $(".holdQuestionInput").prepend("<div class='large'></div><a href='../index.html' class='footerButtons restart'>Restart</a>")
-    $(".large").html(`You lose.`)
+    $(".holdQuestionInput").prepend("<div class='large'></div><a href='../index.html' class='footerButtons restart'>I'm sure</a>")
+    $(".large").html(`Are you sure you want to quit?. If no, select Close. If yes, select "I'm sure" `)
 }
 $(".quit").click(quitFunction)
 $(".finished").click(()=>{
@@ -264,5 +263,5 @@ $(".finished").click(()=>{
 $(".rules").click(()=>{
     $(".modalDisplay").css("display","flex")
     $(".holdQuestionInput").prepend("<div class='large'></div>")
-    $(".large").html("you got it")
+    $(".large").html('This is jeopardy: answer the questions correctly to recieve points (all answers should be inputed with lowercase letters). Answer incorrectly and lose points.</br> Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! </br>Score above zero and win! Score 0 and tie. Score below 0 and lose.')
 })

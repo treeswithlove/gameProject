@@ -9,11 +9,9 @@ https://github.com/treeswithlove/gameProject/projects/1
 ---------------------------------- 
 ## GameRules
 
-This is jeopardy: answer the questions correctly to recieve points. 
-answer incorrectly and lose points.
-Score above zero and win!
-Score 0 and tie.
-Score below 0 and lose.
+This is jeopardy: answer the questions correctly to recieve points (all answers should be inputed with lowercase letters). Answer incorrectly and lose points.
+Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! 
+Score above zero and win! Score 0 and tie. Score below 0 and lose.
 --------------------------------
 
 **Here lies my whiteboarding**
