@@ -59,26 +59,28 @@ for (let i = 1; i < 6; i++) {
     }
 }
 //object of objects with my questions and answers
+//https://play.howstuffworks.com/quiz/compost-quiz
 const questionsAnswers = {
     11: {
-        question: "True or false? When you put things in the trash, the trash goes to a landfill and hurts the environment?",
+        question: "True or false? Newspaper is organic waste?",
         answer: "true"
+
     },
     12: {
-        question: "Composting enriches the soil and reduces trash from going where?",
-        answer: "landfill"
+        question: "True or false? Soil is required for composting?",
+        answer: "true"
     },
     13: {
-        question: "w",
-        answer: "b"
+        question: "True or false? During the composting process, microorganisms from the soil eat the waste and break it down?",
+        answer: "true"
     },
     14: {
-        question: "e",
-        answer: "c"
+        question: "Where does 57% of garbage go?",
+        answer: "landfill"
     },
     15: {
-        question: "r",
-        answer: ""
+        question: "How many tons of trash do Americans create each year?",
+        answer: "210"
     },
     21: {
         question: "",
