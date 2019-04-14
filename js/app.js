@@ -238,7 +238,7 @@ $("footer").prepend("<div><button class='footerButtons quit'>Quit</button><butto
 
 let quitFunction = () => {
     $(".modalDisplay").css("display", "flex")
-    $(".holdQuestionInput").prepend("<div class='large'></div><a href='./content.html' class='footerButtons restart'>I'm sure</a>")
+    $(".holdQuestionInput").prepend("<div class='large'></div><a href='../gameProject/content.html' class='footerButtons restart'>I'm sure</a>")
     $(".large").html(`Are you sure you want to quit? </br>If no, select Close. If yes, select "I'm sure" `)
 }
 $(".quit").click(quitFunction)
