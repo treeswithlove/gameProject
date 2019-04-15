@@ -87,6 +87,14 @@ footer {
     color:rgb(19, 43, 9);
     font-family: always; 
 }
+.restart {
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 1rem;
+   
+    color:rgb(19, 43, 9);
+    font-family: always; 
+}
 .modalDisplay, .indexPage {
     display: none;
     height: 100%;

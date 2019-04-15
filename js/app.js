@@ -241,14 +241,14 @@ $("footer").prepend("<div><button class='footerButtons quit'>Quit</button><butto
 
 let quitFunction = () => {
     $(".modalDisplay").css("display", "flex")
-    $(".holdQuestionInput").prepend("<div class='large'></div><a href='./index.html' class='footerButtons restart'>I'm sure</a>")
+    $(".holdQuestionInput").prepend("<div class='large'></div><a href='./index.html' class='restart'>I'm sure</a>")
     $(".large").html(`Are you sure you want to quit? </br>If no, select Close. If yes, select "I'm sure" `)
 }
 $(".quit").click(quitFunction)
 $(".finished").click(() => {
     $(".modalDisplay").css("display", "flex")
     $(".modalDisplay").empty()
-    $(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInput'><div class='large'></div><a href='./index.html' class='footerButtons restart'>Restart</a></div></div>")
+    $(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInput'><div class='large'></div><a href='./index.html' class='restart'>Restart</a></div></div>")
     if (userScore > 0) { $(".large").html(`Your final score is ${userScore}. You win!!`) }
     else if (userScore == 0) { $(".large").html(`Your final score is ${userScore}. You tie!!`) }
     else { $(".large").html(`Your final score is ${userScore}.You lose!`) }
