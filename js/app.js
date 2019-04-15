@@ -160,7 +160,7 @@ const questionsAnswers = {
         answer: "true"
     },
     55: {
-        question: "Fill in the blank</br>Reduce means: Use less of something, creating smaller amounts of -----",
+        question: "Fill in the blank</br>Reduce means: Use less of something, creating smaller amounts of -----.",
         answer: "waste"
     },
 
