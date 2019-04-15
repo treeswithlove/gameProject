@@ -167,7 +167,7 @@ const questionsAnswers = {
 
 }
 //display score is aside
-$("aside").prepend("<h1>Your Score</h1><p class='score'>0</p>")
+$("aside").prepend("<h2>Your Score</h2><p class='score'>0</p>")
 //create modal
 $(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInput'></div><p class='close'>close</p></div>")
 // create event listner for click to get id
@@ -175,7 +175,7 @@ $(".modalDisplay").prepend("<div class='modalInside'><div class='holdQuestionInp
 
 $(".modalLink").click(function () {
     //creates new question and input field after emptying it
-    $(".holdQuestionInput").prepend("<h1 class='large'>Question:</h1><p class='question'></p><div class='holdSubmit'><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div></div>")
+    $(".holdQuestionInput").prepend("<h2 class='large'>Question:</h2><p class='question'></p><div class='holdSubmit'><input type=text placeholder='who/what/where is...?'><button class='submit'>submit answer</button></div></div>")
 
     let getId = $(this).attr('id')
 
@@ -257,5 +257,5 @@ $(".finished").click(() => {
 $(".rules").click(() => {
     $(".modalDisplay").css("display", "flex")
     $(".holdQuestionInput").prepend("<div class='large'></div>")
-    $(".large").html('This is jeopardy: answer the questions correctly to recieve points (all answers should be inputed with lowercase letters). Answer incorrectly and lose points.</br> Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! </br>Score above zero and win! Score 0 and tie. Score below 0 and lose.')
+    $(".large").html('This is jeopardy: answer the questions correctly to recieve points </br> (all answers should be inputed with lowercase letters). </br> Answer incorrectly and lose points.</br> Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! </br> Score above zero and win! Score 0 and tie. </br> Score below 0 and lose.')
 })
