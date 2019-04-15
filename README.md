@@ -5,7 +5,7 @@ https://nervous-clarke-cf44d3.netlify.com
 Used trello for pre-planning.
 https://trello.com/b/spJyH8lK/project-1-game
 Used git hub for further planning.
-https://github.com/treeswithlove/gameProject/projects/1
+https://github.com/treeswithlove/gameProject/projects?query=is%3Aclosed
 ---------------------------------- 
 ## GameRules
 
