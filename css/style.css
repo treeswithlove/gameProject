@@ -139,7 +139,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid thin darkblue;
+    border: solid thin rgb(5, 77, 65);
 }
 .modalLink {
     background-color: rgb(223, 221, 140);
