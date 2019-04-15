@@ -188,7 +188,7 @@ $(".modalLink").click(function () {
     $(".submit").click(() => {
         
         //this grabs input and consolelogs
-        let userInput = $("input:text").val()
+        let userInput = $("input:text").val().toLowerCase()
         console.log(userInput)
         console.log(answer)
        
