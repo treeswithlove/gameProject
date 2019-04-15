@@ -120,7 +120,7 @@ footer {
     display: flex;
     flex-direction: column;
     font-family: always; 
-    
+    line-height: 2;
 }
 a {
     text-decoration: none;

@@ -257,5 +257,5 @@ $(".finished").click(() => {
 $(".rules").click(() => {
     $(".modalDisplay").css("display", "flex")
     $(".holdQuestionInput").prepend("<div class='large'></div>")
-    $(".large").html('This is jeopardy: answer the questions correctly to recieve points </br> (all answers should be inputed with lowercase letters). </br> Answer incorrectly and lose points.</br> Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! </br> Score above zero and win! Score 0 and tie. </br> Score below 0 and lose.')
+    $(".large").html('This is jeopardy: answer the questions correctly to recieve points </br> ( All answers should be inputed with lowercase letters). </br> Answer incorrectly and lose points.</br> Once you answer all the questions click the "Answered all the questions! Did I win?" button to see if you won! </br> Score above zero and win! Score 0 and tie. </br> Score below 0 and lose.')
 })
